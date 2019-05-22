@@ -1,0 +1,12 @@
+= JShell
+
+Powłoka, REPL, projekt Kulla.
+
+Powłoka :: czyli interpreter poleceń, piszesz kod Jawy i ten kod od razu jest interpretowany, czyli tłumaczony do kodu bajtowego i potem maszynowego - zatem wykonywany.
+
+REPL :: Read - Eval - Print - Loop, sekwencja kroków wg której działają interpretery języków programowania: wpierw czytają co wpiszesz, potem to ewaluują (wykonują), potem drukują rezultat (błędny czy udany) i wreszcie przechodzą do punktu 1, czyli robią te kroki w pętli.
+
+Projekt Kulla :: projekt w ramach którego stworzono JShella, nazwany od babilońskiego boga budowniczego - zbudował raj, a potem został wygnany. JShell ma służyć do rozpoczęcia pracy, by potem zostać zastąpionym poważniejszymi narzędziami, jak np. IDE.
+
+
+To repozytorium nauczy Cię jak i kiedy korzystać z JShella.
