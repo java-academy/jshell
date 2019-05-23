@@ -2,6 +2,7 @@ void s(long time){
 	try{
 		Thread.sleep(time);
 	} catch (InterruptedException e){
+		Thread.currentThread().interrupt();
 	}
 }
 
@@ -19,12 +20,4 @@ System.out.println("- Declare a method which add two int numbers");
 System.out.println("- See the difference between /list and /vars");
 System.out.println("- Try to declare class which contains two numbers and has methods to do operations on them");
 s(5000);
-System.out.println("When you finished, start Primitives.jsh");
-System.out.println("Which command will you use?");
-s(3000);
-System.out.println("                   |");
-System.out.println("                   |");
-System.out.println("                   |");
-System.out.println("                  \\ /");
-System.out.println("                   .");
-System.out.println("Yes, it will be /open ../primitives/Primitives.jsh (we need to change the path)");
+System.out.println("Don't rush. You have how many time you want. When you finished, use /open command to open Imports.jsh");
