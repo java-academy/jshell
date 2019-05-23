@@ -1,0 +1,127 @@
+{
+   "questions":[
+      {
+         "id":0,
+         "question":"What is the formula for primitives range",
+         "answers":{
+            "answers":[
+               "-2^(n-1) : 2^(n-1)",
+               "-2^(n-1) : 2^(n-1) - 1",
+               "-2^n : 2^n"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"We need 2 places to represent binary values of 1 and 0. n is a size of type in bits.Subtracting one from min and max is because we need to leave place for most significant bit.The minus one from max value is for representing zero."
+      },
+      {
+         "id":1,
+         "question":"What is binary representation of 1",
+         "answers":{
+            "answers":[
+               "0000 0000 0000 0000 0000 0000 0000 0001",
+               "1111 1111 1111 1111 1111 1111 1111 1111",
+               "1000 0000 0000 0000 0000 0000 0000 0000"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"0000 0000 0000 0000 0000 0000 0000 0001 - because 2^0 \u003d 1"
+      },
+      {
+         "id":2,
+         "question":"What is binary representation of -1",
+         "answers":{
+            "answers":[
+               "0000 0000 0000 0000 0000 0000 0000 0001",
+               "1111 1111 1111 1111 1111 1111 1111 1111",
+               "1000 0000 0000 0000 0000 0000 0000 0000"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"1111 1111 1111 1111 1111 1111 1111 1111 - first bit must be one to define that number is negative,to get negative number we take positive representation of number and do the negation (all 0 change to 1, all 1 change to 0), and then add binary one, because range isn\u0027t symmetric."
+      },
+      {
+         "id":3,
+         "question":"How looks min and max values as binary",
+         "answers":{
+            "answers":[
+               "min: 0000 0000 0000 0000 0000 0000 0000 0001 max: 1111 1111 1111 1111 1111 1111 1111 1111",
+               "min: 1000 0000 0000 0000 0000 0000 0000 0000 max: 0111 1111 1111 1111 1111 1111 1111 1111",
+               "min: 0000 0000 0000 0000 0000 0000 0000 0001 max: 1000 0000 0000 0000 0000 0000 0000 0000"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"min: 1000 0000 0000 0000 0000 0000 0000 0000 max: 0111 1111 1111 1111 1111 1111 1111 1111 min is the smallest negative number (first bit is 1), max is the biggest positive number (first bit is 0)"
+      },
+      {
+         "id":4,
+         "question":"What will be the result of int twoMaxInts \u003d Integer.MAX_VALUE + Integer.MAX_VALUE;",
+         "answers":{
+            "answers":[
+               "compilation error",
+               "-2",
+               "Integer.MAX_VALUE",
+               "runtime error"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"In case of exceeding the max value, in Java the number collapses. Counter starts from the smallest number and add missing value. So when we add two max values we get min value and add to it MAX_VALUE - 1"
+      },
+      {
+         "id":5,
+         "question":"What will be the result of int twoMaxShorts \u003d Short.MAX_VALUE + Short.MAX_VALUE;",
+         "answers":{
+            "answers":[
+               "compilation error",
+               "-2",
+               "65534",
+               "runtime error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"Conversion of short to int is implicit, because range of int can contains value of big short"
+      },
+      {
+         "id":6,
+         "question":"What will be the result of short twoMaxShorts \u003d Short.MAX_VALUE + Short.MAX_VALUE;",
+         "answers":{
+            "answers":[
+               "compilation error",
+               "-2",
+               "65534",
+               "runtime error"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"We get compile error \u0027incompatible types: possible lossy conversion from int to short\u0027,because JVM treats short values as integer literal so short variable can\u0027t contain int without loosing precision"
+      },
+      {
+         "id":7,
+         "question":"Whitch line/s doesn't compile?\n\ta) float f1 = 3;\n\tb) float f2 = 3.14;\n\tc) double d1 = 3;\nd) double d2 = 3.14;",
+         "answers":{
+            "answers":[
+               "b, d",
+               "b",
+               "d",
+               "all of them"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"float f = 3.14 can't compile, because we must mark to compilator that we use float by adding 'f' or 'F', like that float f = 3.14f;"
+      },
+      {
+         "id":8,
+         "question":"What returns those declarations for char a = 'A' and char b= '!'?\n\ta) (char)(a + b)\n\tb) a + b",
+         "answers":{
+            "answers":[
+               "(char)(a + b) = 'b', a + b = 'b'",
+               "(char)(a + b) = 98, a + b = 'b'",
+               "(char)(a + b) = 'b', a + b = 98",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"'!' in ASCII has a value 33, and 'A' is 97, so addition give us 98.\n" + 
+"If we convert it to char, we will get 'b', which value is equal to 98 in ASCII."
+      }
+   ]
+}

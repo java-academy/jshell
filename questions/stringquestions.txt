@@ -1,0 +1,112 @@
+{
+   "questions":[
+      {
+         "id":0,
+         "question":"What will be the result of: (new String(\"good\").equals(new String(\"good\"));)",
+         "answers":{
+            "answers":[
+               "true",
+               "false",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"Equals method compares the content of variable. Read about Objects.equals()"
+      },
+      {
+         "id":1,
+         "question":"What will be the result of: (new String(null).equals(new String(\"good\"));)",
+         "answers":{
+            "answers":[
+               "true",
+               "false",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"We can\u0027t call method on null object"
+      },
+      {
+         "id":2,
+         "question":"What will be the result when String n \u003d null of: (Objects.equals(n, n));)",
+         "answers":{
+            "answers":[
+               "true",
+               "false",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"Equals method of Objects can compare null objects. If both are null it returns true, if one is null returns false, if both aren\u0027t null call method a.equals(b)"
+      },
+      {
+         "id":3,
+         "question":"What will be the result of: (new String(\"good\") \u003d\u003d (new String(\"good\"));)",
+         "answers":{
+            "answers":[
+               "true",
+               "false",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"Operator \u003d\u003d compare localization of objects. We have two different objects on heap in two different localizations."
+      },
+      {
+         "id":4,
+         "question":"What will be the result of: (new String(\"good\").compare(new String(\"good\"));)",
+         "answers":{
+            "answers":[
+               "4",
+               "-4",
+               "0",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"compare() method has algorithm which count difference between char representation in ASCII (default - you can write your own comparator). If first string is longer returned number is positive,if first string is shorter returned number is negative, if strings are equal returned number is 0.\u0027good\u0027 length \u003d 4, co 4 - 4 \u003d 0"
+      },
+      {
+         "id":5,
+         "question":"What will be the result of: (new String(\"good\").compare(new String(\"Good\"));)",
+         "answers":{
+            "answers":[
+               "4",
+               "0",
+               "32",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"\u0027Objects.eq    "
+      },
+      {
+         "id":6,
+         "question":"What will be the result of: (new String(\"good\").compare(new String(\"not good\"));)",
+         "answers":{
+            "answers":[
+               "-4",
+               "-7",
+               "7",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"Operator \u003d\u003d compare localization of objects. We have two different objects on heap in two different localizations."
+      },
+      {
+         "id":7,
+         "question":"Which string declatarion will compile",
+         "answers":{
+            "answers":[
+               "String s = \"My\" +\n\t\"very\" +\n\t\"long\" +\n\t\"string\"\n\t",
+               "String s = \"My\"\n\t\"very\"\n\t\"long\"\n\t\"string\"\n\t",
+               "String s = \'My\'\n\t\'very\'\n\t\'long\'\n\t\'string\'\n\t",
+               "String s = \'My\' +\n\t\'very\' +\n\t\'long\' +\n\t\'string\'\n\t"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"If we divide the string, sign of plus (+) must be added."
+      }
+   ]
+}
