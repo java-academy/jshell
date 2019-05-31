@@ -12,4 +12,5 @@ Projekt Kulla :: projekt w ramach którego stworzono JShella, nazwany od babilo�
 To repozytorium nauczy Cię jak i kiedy korzystać z JShella.
 
 Aby rozpocząć tutorial w folderze jshell otwórz terminal i włącz narzedzie javy jshell. Następnie wpisz /open JShell.jsh i postępuj zgodnie z instrukcjami.
+Najlepiej, jesli będziesz używał(a) terminatora z dwoma oknami. Jednego do przejścia tutorialu, drugiego w razie potrzeby skorzystania z pomocy /help.
 Powodzenia!

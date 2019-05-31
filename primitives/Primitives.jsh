@@ -1,10 +1,4 @@
-void s(long time){
-	try{
-		Thread.sleep(time);
-	} catch (InterruptedException e){
-	}
-}
-
+/open ../engine/start_quiz/start.jsh
 System.out.println("You know that there are 8 primitives type in java");
 System.out.println("4 Integer Literals:");
 System.out.println("\t byte: " + Byte.MIN_VALUE + " : " + Byte.MAX_VALUE + " of size " + Byte.SIZE + " bits");
@@ -26,3 +20,4 @@ System.out.println();
 s(3000);
 System.out.println("Use static fields of wrapped classes to see max and min values of all types like Integer.MAX_VALUE");
 System.out.println("When you finish, write /open ../primitives/Q1.jsh");
+System.out.println("When you finish, start quiz by calling method startQuiz(\"primitives\")");
