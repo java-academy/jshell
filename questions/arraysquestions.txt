@@ -1,0 +1,98 @@
+{
+   "questions":[
+      {
+         "id":0,
+         "question":"Which array creations are proper?\na: int[] a \u003d new int[5];\nb: int[5] b \u003d new int[];\nc: int[] c \u003d {1,2,3};\nd: int d[] \u003d new int[5];\ne: int[] e[] \u003d new int[5];",
+         "answers":{
+            "answers":[
+               "all",
+               "a, c, d",
+               "a, b, c"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"Possible creations for one dimensional array:\nint[] a \u003d new int[5];\nint b[] \u003d new int[5];\nint[] c \u003d {1,2,3};\nint[] d \u003d new int[]{ 1,2,3};\nThe size of the array is not part of its type (which is why the brackets are empty)."
+      },
+      {
+         "id":1,
+         "question":"How can\u0027t we declare multidimensional array?",
+         "answers":{
+            "answers":[
+               "int[][] arr \u003d new int[3][];",
+               "int[][] arr \u003d new int[3][3];",
+               "int[][] arr \u003d new int[][];"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"Multidimensional array is an array of arrays. Each element contains an array.\nWe must provide at least first size of array. Second size can be add dynamically."
+      },
+      {
+         "id":2,
+         "question":"What will be the size of  int[][] arr \u003d new int[3][4];?\nThe result of arr.length",
+         "answers":{
+            "answers":[
+               "12",
+               "3",
+               "7"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"Length is a final field which contains number of elements in array.\nIn multidimensional array each element is an array, but its sizes don\u0027t add up."
+      },
+      {
+         "id":3,
+         "question":"What is class and superClass of int intArray[] \u003d new int[3];",
+         "answers":{
+            "answers":[
+               "class is [I and superClass is java.lang.Object",
+               "class is java.lang.Object and superClass doesn\u0027t exist",
+               "arrays aren\u0027t a class"
+            ]
+         },
+         "goodAnswer":1,
+         "explanation":"All arrays are an object. Result of arr.getClass() is \u0027class [I\u0027 for int typ,\n\u0027class [B\u0027 for byte type, \u0027class [S\u0027 for short type, \u0027class [Ljava.lang.String\u0027 for String.\nAnd the result of arr.getClass().getSuperclass() is \u0027class java.lang.Object\u0027. \nBecause of that we can call all of Object methods on array."
+      },
+      {
+         "id":4,
+         "question":"What will be the result of arrays comparison:\n(new int[]{1, 2, 3}).equals(new int[]{1, 2, 3})",
+         "answers":{
+            "answers":[
+               "true",
+               "false",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"Comparison of arrays is \"shallow\", so we don't compare elements of array.\n" + 
+"To do that we must use Arrays.equals() method."
+      },
+      {
+         "id":5,
+         "question":"What will be the result of such operation:\n\tint[] max = new int[3_000_000_000];",
+         "answers":{
+            "answers":[
+               "runtime error",
+               "array of size 3_000_000_000 conteining elements equal 0",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":3,
+         "explanation":"Compilator will tell that \"Integer number too large\", because range of int was exceeded.\n" +
+"If you don't know why, go back to primitives questions."
+      },
+      {
+         "id":6,
+         "question":"What will be the result of such operation:\n\tbyte[] max = new byte[150];",
+         "answers":{
+            "answers":[
+               "runtime error",
+               "array of size 150 conteining elements equal 0",
+               "compilation error"
+            ]
+         },
+         "goodAnswer":2,
+         "explanation":"When we create new array, it is fill by default values, so for logical boolean it will be false.\n" +
+"If condition is true, so program will print num variable."
+      }
+   ]
+}
